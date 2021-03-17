@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    color: #333333;
+    scroll-behavior: smooth;
+}
+
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+ }
+
+aside{
+    display: none;
+}
+
+h1{
+    font-family: 'Lato';
+    font-weight: 700;
+    color: #2d62d6;
+    font-size: 36px;
+}
+
+h3{
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: #333333;
+    line-height: 20px;
+    font-size: 18px;
+    overflow-y: hidden;
+}
+
+h5{
+    color: #2d62d6;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+p{
+    font-size: 16px;
+}
+
+li{
+    font-size: 16px;
+}
+
+td{
+    font-size: 16px;
+}
+
+#magreza{
+    display: none;
+    background-color: #419fdd;
+    color: #f7f7f7;
+    font-weight: 700; 
+}
+
+#normal{
+    display: none;
+    background-color: #008000;
+    color: #f7f7f7;
+    font-weight: 700; 
+}
+
+#sobrepeso{
+    display: none;
+    background-color: #8a8a05;
+    color: #f7f7f7;
+    font-weight: 700; 
+}
+
+#obesidade{
+    display: none;
+    background-color: #ffa500;
+    color: #f7f7f7;
+    font-weight: 700;  
+}
+
+#obesidade-grave{
+    display: none;
+    background-color: #ff0000;
+    color: #f7f7f7;
+    font-weight: 700;
+}
+
+#magreza-texto{
+    display: none;
+    background-color: #419fdd;
+    color: #f7f7f7;
+    font-weight: 700; 
+}
+
+#normal-texto{
+    display: none;
+    background-color: #008000;
+    color: #f7f7f7;
+    font-weight: 700; 
+}
+
+#sobrepeso-texto{
+    display: none;
+    background-color: #8a8a05;
+    color: #f7f7f7;
+    font-weight: 700; 
+}
+
+#obesidade-texto{
+    display: none;
+    background-color: #ffa500;
+    color: #f7f7f7;
+    font-weight: 700; 
+}
+
+#obsg-texto{
+    display: none;
+    background-color: #ff0000;
+    color: #f7f7f7;
+    font-weight: 700;
+}
+
+/*Header Menu Mobile*/
+
+aside .menu-mobile{
+    position:fixed;
+    top: 0px;;
+    left: 0px;
+    z-index:999;
+    display:flex;   
+}
+
+aside .menu-mobile #menu-opener {
+    width:40px;
+    height:40px;
+    cursor:pointer;
+    margin-top:10px;
+    margin-right:10px;
+    overflow-y: hidden;
+}
+
+aside .menu-mobile #menu-opener img{
+    position:fixed;
+    top: 5px;
+    right: 5px;
+}
+
+aside .menu-mobile #menu-area {
+    width:0vw;
+    overflow: hidden;
+    height:100vh;
+    background:rgba(45, 98, 214, 0.8);
+    overflow-x:hidden;
+    overflow-y:hidden;
+    transition: all ease 1s;
+}
+
+aside .menu-mobile .menu-opened ul{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-mobile .menu-opened ul  li img{
+    border: 2px solid #2d62d6;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#menu-area li a{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: center;
+    padding:20px;
+    color:#ffffff;
+    cursor:pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#menu-area li a:hover {
+    color:#212529;
+}
+
+/*Header*/
+
+.header{
+    width: 960px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header nav ul,
+.header nav li{
+    list-style: none;
+}
+
+.header nav ul{
+    display: flex;
+}
+
+.header nav ul li a{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 18px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.header nav ul li a:hover{
+    color: #ffffff;
+    background-color: #2d62d6;
+    transition: all ease 0.8s;   
+}
+
+/*Banner*/
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 100%;
+    background-position: center;
+    background-size: auto;
+}
+
+.banner img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 100%;
+    background-position: center;
+    background-size: auto;
+}
+
+/*Section Calculo IMC*/
+
+.calculo-imc{
+    width: 960px;
+    height: 332px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+.resposta-input{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.resposta-input h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.resposta-input p{
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.peso-altura{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.peso-altura .peso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    background-color: #ececf1;
+    border-radius: 10px;
+}
+
+.peso-altura .peso input:hover{
+    box-shadow: 0px 0px 6px #333;
+}
+
+.peso-altura .altura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+    background-color: #ececf1;
+    border-radius: 10px;
+}
+
+.peso-altura .peso input{
+    width: 80px;
+    height: 50px;
+    font-size: 40px;
+    border: none;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    font-family: 'Lato';
+    font-weight: 700;
+    color: #2d62d6;
+}
+
+.peso-altura .altura input{
+    width: 80px;
+    height: 50px;
+    font-size: 40px;
+    border: none;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    font-family: 'Lato';
+    font-weight: 700;
+    color: #2d62d6;
+}
+
+.peso-altura .altura input:hover{
+    box-shadow: 0px 0px 6px #333;
+}
+
+.resposta-input .b-calculo{
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #2d62d6;
+    color: #ffffff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+.resposta-input .b-calculo:hover{
+    background-color: #419fdd;
+    transition: 0.8s; 
+}
+
+.resultado-imc{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.resultado-imc h1{
+    margin-top: 20px;
+    margin-bottom:27px;
+    font-weight: 700;
+    color: #2d62d6;
+}
+
+.resultado-imc .resultado-imc-geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    height: 240px; 
+    border-radius: 10px;
+}
+
+.resultado-imc .resultado-imc-geral .resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ececf1;
+    width: 260px;
+    height: 100px;
+    border-radius: 10px;
+}
+.resultado-imc .resultado-imc-geral .resultado h2{
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    text-align: center;
+    margin: 3px 0px 3px 0px;
+    font-family: 'Lato';
+    font-weight: 700;
+    border-bottom: 2px solid #2d62d6;
+    color: #2d62d6;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+.resultado-imc .resultado-imc-geral .resultado p{
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.resultado-imc .resultado-imc-geral p{
+    background-color: #ececf1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0px 10px 0px 10px;
+}
+
+/*Section definição imc*/
+
+.definicao-imc{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.definicao-imc .definicao-imc-texto{
+    width: 960px;
+    background-color: #ececf1;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+.definicao-imc .definicao-imc-texto h1{
+    margin: 20px 0px 20px 0px;
+}
+
+.definicao-imc .definicao-imc-texto h3{
+    margin: 20px 0px 20px 0px;
+}
+
+.definicao-imc .definicao-imc-texto p{
+    margin: 20px 0px 20px 0px;
+}
+
+/*Section Tabela de Valores*/
+
+.tabela-de-valores{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.tabela-de-valores .tabela-de-valores-texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 960px;
+    height: auto;
+    background-color: #ececf1;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table tr td{
+    border-bottom: 1px solid #dee2e7;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table tr td{
+    padding: 10px 50px 10px 50px;
+    text-align: justify;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table tr td p{
+    text-align: center;
+}
+
+.titulo-tabela{
+    background-color: #2d62d6;
+    border-radius: 18px;
+}
+
+.titulo-tabela span{
+    color: #ffffff;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/*Section Sobre essa Pagina*/
+
+.sobre-essa-pagina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.sobre-essa-pagina .sobre-essa-pagina-interno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sobre-essa-pagina .sobre-essa-pagina-interno p{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #707070;
+}
+
+.sobre-essa-pagina .sobre-essa-pagina-interno img{ 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 400px;
+    height: auto;
+}
+
+/*Rodapé*/
+
+.rodape-conteudo{
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+}
+
+.rodape-conteudo p{
+    margin-top: 10px;
+    color: #f4f6fd;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.rodape-conteudo p email{
+    color: #b9b9b9;
+    font-weight: 400;
+}
+
+.rodape-conteudo p email:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.rodape-conteudo p span{
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #b9b9b9;
+    display: inline-block;
+    width: 960px;
+}
+
+@media (min-width:768px) and (max-width:969px){
+
+h1{
+    font-size: 36px;
+    overflow-y: hidden;
+}
+
+h3{
+    font-size: 16px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+p{
+    font-size: 16px;
+    overflow-y: hidden;
+}
+
+li{
+    font-size: 14px;
+}
+
+td{
+    font-size: 14px;
+}
+
+/*Header*/
+
+.header{
+    width: 760px;
+    height: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.header nav ul li a{
+    font-size: 14px;
+}
+
+/*Section Calculo IMC*/
+
+.calculo-imc{
+    width: 710px;
+    height: 332px;
+}
+
+.resposta-input p{
+    font-size: 16px;
+    text-align: center;
+}
+
+.peso-altura .peso{
+    font-size: 16px;
+}
+
+.peso-altura .altura{
+    font-size: 16px;
+}
+
+.resposta-input .b-calculo{
+    font-size: 16px;
+}
+
+.resultado-imc .resultado-imc-geral p{
+    font-size: 14px;
+}
+
+/*Section definição imc*/
+
+.definicao-imc .definicao-imc-texto{
+    width: 710px;
+}
+
+/*Section Tabela de Valores*/
+
+.tabela-de-valores .tabela-de-valores-texto{
+    width: 710px;
+}
+
+.titulo-tabela span a{
+    font-size: 16px;
+}
+
+/*Section Sobre essa Pagina*/
+
+.sobre-essa-pagina .sobre-essa-pagina-interno img{ 
+    width: 350px;
+}
+
+/*Rodapé*/
+
+.rodape-conteudo p span{
+    width: 660px;
+}
+
+}
+
+@media (min-width:421px) and (max-width:767px){
+
+aside{
+    display:flex
+}
+
+h1{
+    font-size: 36px;
+}
+    
+h3{
+    font-size: 16px;
+}
+    
+h5{
+    font-size: 16px;
+}
+    
+p{
+    font-size: 16px;
+}
+    
+li{
+    font-size: 16px;
+}
+    
+td{
+    font-size: 16px;
+}
+    
+/*Header*/
+    
+.header{
+    display: none;
+}
+    
+.header nav ul li a{
+    font-size: 16px;
+}
+    
+/*Section Calculo IMC*/
+
+.calculo-imc{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+ 
+.resposta-input p{
+    font-size: 16px;
+    text-align: center;
+}
+    
+.peso-altura .peso{
+    font-size: 16px;
+    margin-right: 5px;
+}
+    
+.peso-altura .altura{
+    font-size: 16px;
+    margin-left: 5px;
+}
+    
+.resposta-input .b-calculo{
+    font-size: 20px;
+}
+    
+.resultado-imc .resultado-imc-geral p{
+    font-size: 14px;
+}
+
+.resultado-imc{
+    width: 100%;
+    height: 100%;
+}
+ 
+/*Section definição imc*/
+    
+.definicao-imc .definicao-imc-texto{
+    width: 100vw;
+}
+    
+/*Section Tabela de Valores*/
+
+.tabela-de-valores .tabela-de-valores-texto{
+    width: 100vw;
+    height: auto;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table tr td{
+    border-bottom: 1px solid #dee2e7;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table tr td{
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
+
+.titulo-tabela span a{
+    font-size: 16px;
+}
+  
+/*Section Sobre essa Pagina*/
+    
+.sobre-essa-pagina .sobre-essa-pagina-interno img{ 
+    width: 250px;
+}
+    
+/*Rodapé*/
+    
+.rodape-conteudo p span{
+    width: 320px;
+}
+
+}
+
+@media (max-width:420px){
+
+aside{
+    display: flex;
+}
+
+h1{
+    font-size: 26px;
+}
+       
+h3{
+    font-size: 14px;
+}
+    
+h5{
+    font-size: 13px;
+}
+    
+p{
+    font-size: 14px;
+}
+    
+li{
+    font-size: 14px;
+}
+    
+td{
+    font-size: 14px;
+}
+    
+/*Header*/
+    
+.header{
+    display:none;
+}
+     
+/*Section Calculo IMC*/
+
+.calculo-imc{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+ 
+.resposta-input p{
+    font-size: 12px;
+    text-align: center;
+}
+    
+.peso-altura .peso{
+    font-size: 12px;
+    margin-right: 5px;
+}
+    
+.peso-altura .altura{
+    font-size: 12px;
+    margin-left: 5px;
+}
+    
+.resposta-input .b-calculo{
+    font-size: 16px;
+}
+    
+.resultado-imc .resultado-imc-geral p{
+    font-size: 12px;
+}
+
+.resultado-imc{
+    width: 100%;
+    height: 100%;
+}
+
+.peso-altura .altura input{
+    width: 60px;
+    height: 50px;
+    font-size: 35px;
+    margin: 5px 0px 5px 0px;
+}
+
+
+.peso-altura .peso input{
+    width: 60px;
+    height: 50px;
+    font-size: 35px;
+    margin: 5px 0px 5px 0px;
+}
+ 
+/*Section definição imc*/
+    
+.definicao-imc .definicao-imc-texto{
+    width: 100vw;
+}
+    
+/*Section Tabela de Valores*/
+
+.tabela-de-valores .tabela-de-valores-texto{
+    width: 100vw;
+    height: auto;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table tr td{
+    border-bottom: 1px solid #dee2e7;
+}
+
+.tabela-de-valores .tabela-de-valores-texto table tr td{
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+}
+
+.titulo-tabela span a{
+    font-size: 16px;
+}
+  
+/*Section Sobre essa Pagina*/
+    
+.sobre-essa-pagina .sobre-essa-pagina-interno img{ 
+    width: 200px;
+}
+
+.sobre-essa-pagina .sobre-essa-pagina-interno p{ 
+    width: 280px;
+}
+    
+/*Rodapé*/
+    
+.rodape-conteudo p span{
+    width: 280px;
+}
+
+}
+
+
+
+
+
+    
+    
